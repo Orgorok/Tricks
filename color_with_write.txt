@@ -20,7 +20,7 @@ write(1, "Bonjour", 7);
 
 wrtie(1, "\033[32mBonjour", 14);
 	=> Ecrira bonjour en vert et tout ce qui suivra.
-	=> "\033[32m" compte pour 7 caracteres en plus. le \0compte pour un.
+	=> "\033[32m" compte pour 7 caracteres en plus. le \0 compte pour un.
 
 wrtie(1, "\033[32mBonjour\033[0m", 20);
 	=> Ecrira seulement bonjour en vert et tout ce qui suivra sera en couleur native.
