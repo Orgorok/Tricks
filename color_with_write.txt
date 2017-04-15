@@ -1,0 +1,22 @@
+#include <unistd.h>  // Pour le write() ; La couleur ne demande aucune autre ressource.
+
+DEFAULT   = "\033[0m";
+HIGHLIGHT = "\033[1m";
+UNDERLINE = "\033[4m";
+BLINK     = "\033[5m";
+BLACK     = "\033[30m";
+RED       = "\033[31m";
+GREEN     = "\033[32m";
+YELLOW    = "\033[33m";
+BLUE      = "\033[34m";
+PURPLE    = "\033[35m";
+CYAN      = "\033[36m";
+WHITE     = "\033[37m";
+
+//////////////////////////////////////////
+write(1, "Bonjour", 7);					// Ecrira bonjour sur la sortie standard.
+
+wrtie(1, "\033[32mBonjour", 14);		// Ecrira bonjour en vert et tout ce qui suivra.
+										// "\033[32m" compte pour 7 caracteres en plus. le \033 compte pour un.
+
+wrtie(1, "\033[32mBonjour\033[0m", 20);	// Ecrira seulement bonjour en vert et tout ce qui suivra sera en couleur native.
